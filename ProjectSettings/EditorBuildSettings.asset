@@ -1,0 +1,11 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/CardboardColorBlindnessUnity.unity
+    guid: 6d0d4e09580bf2342877a38cf8b1adf8
+  m_configObjects: {}

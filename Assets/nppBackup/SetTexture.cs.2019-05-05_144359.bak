@@ -1,0 +1,101 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
+
+public class SetTexture : MonoBehaviour
+{
+	public String name;
+	
+	public GameObject sphere;
+	
+	private static String currentImage = "dome";
+	
+	public Texture dome;
+	public Texture domeDeuteranope;
+	public Texture domeProtanope;
+	public Texture domeTritanope;
+	
+	public Texture flowers;
+	public Texture flowersDeuteranope;
+	public Texture flowersProtanope;
+	public Texture flowersTritanope;
+	
+	private static int count = 0;
+	private bool isLookAtItem = false;
+	
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("STARR");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isLookAtItem) count++;
+		if (count == 150) {
+			Debug.Log("150!!!");
+			if (name == "setDome") setDome();
+			if (name == "setFlowers") setFlowers();
+			if (name == "setDeuteranope") {
+				if (currentImage == "dome") setDomeDeuteranope();
+				if (currentImage == "flowers") setFlowersDeuteranope();
+			}
+			if (name == "setProtanope") {
+				if (currentImage == "dome") setDomeProtanope();
+				if (currentImage == "flowers") setFlowersProtanope();
+			}
+			if (name == "setTritanope") {
+				if (currentImage == "dome") setDomeTritanope();
+				if (currentImage == "flowers") setFlowersTritanope();
+			}
+		}
+    }
+	
+	public void enter() {
+		Debug.Log("ENTER");
+		isLookAtItem = true;
+	}
+	
+	public void pointerLeave() {
+		isLookAtItem = false;
+		count = 0;
+	}
+	
+	void setDome() {
+		sphere.GetComponent<Renderer>().material.mainTexture = dome;
+		currentImage = "dome";
+	}
+	
+	void setDomeDeuteranope() {
+		sphere.GetComponent<Renderer>().material.mainTexture = domeDeuteranope;
+	}
+	
+	void setDomeProtanope() {
+		sphere.GetComponent<Renderer>().material.mainTexture = domeProtanope;
+	}
+	
+	void setDomeTritanope() {
+		sphere.GetComponent<Renderer>().material.mainTexture = domeTritanope;
+	}
+	
+	void setFlowers() {
+		sphere.GetComponent<Renderer>().material.mainTexture = flowers;
+		currentImage = "flowers";
+	}
+	
+	void setFlowersDeuteranope() {
+		sphere.GetComponent<Renderer>().material.mainTexture = flowersDeuteranope;
+	}
+	
+	void setFlowersProtanope() {
+		sphere.GetComponent<Renderer>().material.mainTexture = flowersProtanope;
+	}
+	
+	void setFlowersTritanope() {
+		sphere.GetComponent<Renderer>().material.mainTexture = flowersTritanope;
+	}
+}

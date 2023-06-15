@@ -1,0 +1,69 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SetTexture : MonoBehaviour
+{
+	public String name;
+	
+	public GameObject sphere;
+	
+	private static String currentImage = "dome";
+	private static String currentMode = "protanope";
+	
+	public Texture dome;
+	public Texture domeDeuteranope;
+	public Texture domeProtanope;
+	public Texture domeTritanope;
+	
+	public Texture flowers;
+	public Texture flowersDeuteranope;
+	public Texture flowersProtanope;
+	public Texture flowersTritanope;
+	
+	private static int count = 0;
+	
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+	
+	void setDome() {
+		sphere.GetComponent<Renderer>().material.mainTexute = dome;
+	}
+	
+	void setDomeDeuteranope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = domeDeuteranope;
+	}
+	
+	void setDomeProtanope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = domeProtanope;
+	}
+	
+	void setDomeTritanope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = domeTritanope;
+	}
+	
+	void setFlowers() {
+		sphere.GetComponent<Renderer>().material.mainTexute = flowers;
+	}
+	
+	void setFlowersDeuteranope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = flowersDeuteranope;
+	}
+	
+	void setFlowersProtanope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = flowersProtanope;
+	}
+	
+	void setFlowersTritanope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = flowersTritanope;
+	}
+}

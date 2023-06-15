@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SetTexture : MonoBehaviour
+{
+	public String name;
+	
+	public GameObject sphere;
+	
+	public String currentImage = "dome";
+	
+	public Texture dome;
+	public Texture domeDeuteranope;
+	public Texture domeProtanope;
+	public Texture domeTritanope;
+	
+	public Texture flowers;
+	public Texture flowersDeuteranope;
+	public Texture flowersProtanope;
+	public Texture flowersTritanope;
+	
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+	
+	void setDome() {
+		sphere.GetComponent<Renderer>().material.mainTexute = dome;
+	}
+	
+	void setDomeDeuteranope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = domeDeuteranope;
+	}
+	
+	void setDomeProtanope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = domeProtanope;
+	}
+	
+	void setDomeTritanope() {
+		sphere.GetComponent<Renderer>().material.mainTexute = domeTritanope;
+	}
+}
